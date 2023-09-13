@@ -12,10 +12,11 @@ const jsonToken = async(req,res,next) => {
             if(error){
                 return res.status(403).json({mgs: "error token"})
             }else{
-                req.user = {
+               req.user = {
                     uid:decoded.id,
                     name: decoded.id
                 }
+
                 next()
             }
 
