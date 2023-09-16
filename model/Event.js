@@ -5,6 +5,9 @@ const EventSchema = new mongoose.Schema({
         type:String,
         required:true
     },
+    notes:{
+        type: String
+    },
     start:{
         type: Date,
         required: true

@@ -12,8 +12,8 @@ eventRouter.route("/")
     check("title", "el titulo es requerido").not().isEmpty(),
     check("start", "la fecha no es valida").custom(validateDate),
     check("end", "la fecha no es valida").custom(validateDate),
-    handleValidator
-],createEvent)
+    
+],handleValidator,createEvent)
 
 eventRouter.route("/:id")
 .delete(deleteEvent)

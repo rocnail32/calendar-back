@@ -103,6 +103,8 @@ const renewToken = (req, res) => {
         name
     }
 
+    console.log(uid)
+
     const token = jwt.sign(payload,process.env.SECRET,{
         expiresIn: "2h"
     })
